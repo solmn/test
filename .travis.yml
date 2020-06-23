@@ -4,3 +4,8 @@ services:
 script:
     - docker build -t solmn/node .
     - docker images solmn/node
+deploy:
+    provider: script
+    script: docker push solmn/node
+    on:
+        branch: master
