@@ -1,0 +1,6 @@
+sudo: required
+services:
+    - docker
+script:
+    - docker build -t solmn/node .
+    - docker images solmn/node
