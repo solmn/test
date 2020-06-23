@@ -4,6 +4,8 @@ services:
 script:
     - docker build -t solmn/node .
     - docker images solmn/node
+before_deploy:
+    - docker login -u solmn -p solomonbehappy14
 deploy:
     provider: script
     script: docker push solmn/node
